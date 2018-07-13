@@ -6,8 +6,8 @@ PhysicMaterial:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Cardboard
-  dynamicFriction: 0.6
-  staticFriction: 0.6
-  bounciness: 0.3
-  frictionCombine: 3
+  dynamicFriction: 0.8
+  staticFriction: 0.46
+  bounciness: 0.35
+  frictionCombine: 0
   bounceCombine: 0

@@ -5,7 +5,8 @@ public class CameraFollow : MonoBehaviour
     public Transform target;
 
     public float smoothTime = 0.125f;
-    public Vector3 offset;
+    public Vector3 offsetPosition;
+    public Vector3 offsetTarget;
 
     private Vector3 desPos;
     private Vector3 smoothPos;
@@ -13,10 +14,10 @@ public class CameraFollow : MonoBehaviour
 
     void LateUpdate ()
     {
-        desPos = target.position + offset;
+        desPos = target.position + offsetPosition;
         smoothPos = Vector3.SmoothDamp(transform.position, desPos, ref velocity, smoothTime);
         transform.position = smoothPos;
 
-        transform.LookAt(target);
+        transform.LookAt(target.position + offsetTarget);
     }
 }
