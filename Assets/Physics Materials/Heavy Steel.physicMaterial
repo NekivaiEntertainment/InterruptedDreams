@@ -6,8 +6,8 @@ PhysicMaterial:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Heavy Steel
-  dynamicFriction: 0.1
+  dynamicFriction: 0.7
   staticFriction: 1
-  bounciness: 0
+  bounciness: 0.2
   frictionCombine: 0
   bounceCombine: 0
