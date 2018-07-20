@@ -12,6 +12,11 @@ public class CameraFollow : MonoBehaviour
     private Vector3 smoothPos;
     private Vector3 velocity = Vector3.zero;
 
+    void Awake()
+    {
+        transform.position = target.position + offsetPosition + new Vector3(0f, 0f, -2f);
+    }
+
     void LateUpdate ()
     {
         desPos = target.position + offsetPosition;

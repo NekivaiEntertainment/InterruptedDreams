@@ -1,7 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
+[RequireComponent(typeof(CharacterController))]
 public class PlayerMove : MonoBehaviour 
 {
 	CharacterController charControl;
@@ -10,6 +9,7 @@ public class PlayerMove : MonoBehaviour
 	void Awake () 
 	{
 		charControl = GetComponent<CharacterController>();
+        Cursor.visible = false;
 	}
 
 	void Update () 
