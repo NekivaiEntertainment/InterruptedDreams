@@ -2219,7 +2219,7 @@ GameObject:
   - component: {fileID: 579515908}
   - component: {fileID: 579515911}
   m_Layer: 0
-  m_Name: Capsule
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2237,6 +2237,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkSpeed: 1.8
+  jumpSpeed: 3.5
+  gravity: 9.8
 --- !u!143 &579515909
 CharacterController:
   m_ObjectHideFlags: 0

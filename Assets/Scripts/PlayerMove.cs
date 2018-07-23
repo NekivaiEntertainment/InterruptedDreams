@@ -3,12 +3,16 @@
 [RequireComponent(typeof(CharacterController))]
 public class PlayerMove : MonoBehaviour 
 {
-	CharacterController charControl;
+	CharacterController controller;
 	public float walkSpeed = 4f;
+    public float jumpSpeed = 8f;
+    public float gravity = 9.8f;
+
+    private Vector3 moveDirection = Vector3.zero;
 
 	void Awake () 
 	{
-		charControl = GetComponent<CharacterController>();
+        controller = GetComponent<CharacterController>();
         Cursor.visible = false;
 	}
 
@@ -19,13 +23,17 @@ public class PlayerMove : MonoBehaviour
 
 	void MovePlayer()
 	{
-		float horiz = Input.GetAxis("Horizontal");
-		float vert = Input.GetAxis("Vertical");
+        if(controller.isGrounded)
+        {
+            moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+            moveDirection = transform.TransformDirection(moveDirection);
+            moveDirection *= walkSpeed;
 
-		Vector3 moveDirectionalS = transform.right * horiz * walkSpeed;
-		Vector3 moveDirectionalF = transform.forward * vert * walkSpeed;
+            if (Input.GetButton("Jump"))
+                moveDirection.y = jumpSpeed;
 
-		charControl.SimpleMove(moveDirectionalS);
-		charControl.SimpleMove(moveDirectionalF);
+        }
+        moveDirection.y -= gravity * Time.deltaTime;
+        controller.Move(moveDirection * Time.deltaTime);
 	}
 }
