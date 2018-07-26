@@ -41,6 +41,13 @@ ModelImporter:
     4300008: Exit_Room
     4300010: Repair_Room
     4300012: Entry_Room
+    6400000: Entry_Room
+    6400002: Exit_Room
+    6400004: Next_Trap_Room
+    6400006: Repair_Room
+    6400008: Safe_Room
+    6400010: Trap_Room
+    6400012: Window_Room_Second_Floor
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -74,7 +81,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1

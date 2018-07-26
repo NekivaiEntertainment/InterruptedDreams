@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using EZCameraShake;
 
 public class CameraFollow : MonoBehaviour
 {    
@@ -8,9 +9,14 @@ public class CameraFollow : MonoBehaviour
     public Vector3 offsetPosition;
     public Vector3 offsetTarget;
 
-    [Header("Stopping distance")]
+    [Header("Stopping Distance")]
     public float closeStop = 0;
     public float farStop = 0;
+
+    [Header("Shake Controls")]
+    public float magnitude = 0.5f;
+    public float roughness = 0.5f;
+    public float fadeInTime = 5f;
 
     private Vector3 desPos;
     private Vector3 smoothPos;
@@ -28,7 +34,8 @@ public class CameraFollow : MonoBehaviour
         smoothPos.z = Mathf.Clamp(smoothPos.z, closeStop, farStop);
         transform.position = smoothPos;
 
-
         transform.LookAt(target.position + offsetTarget);
+
+        CameraShaker.Instance.StartShake(magnitude, roughness, fadeInTime);
     }
 }
