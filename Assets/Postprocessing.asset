@@ -42,8 +42,8 @@ MonoBehaviour:
   ambientOcclusion:
     m_Enabled: 1
     m_Settings:
-      intensity: 0.68
-      radius: 1.52
+      intensity: 1.46
+      radius: 0.69
       sampleCount: 10
       downsampling: 1
       forceForwardCompatibility: 0
@@ -73,7 +73,7 @@ MonoBehaviour:
     m_Settings:
       focusDistance: 5
       aperture: 2
-      focalLength: 50
+      focalLength: 43
       useCameraFov: 0
       kernelSize: 1
   motionBlur:
@@ -97,7 +97,7 @@ MonoBehaviour:
       logMin: -8
       logMax: 4
   bloom:
-    m_Enabled: 1
+    m_Enabled: 0
     m_Settings:
       bloom:
         intensity: 0.3
