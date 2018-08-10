@@ -8,8 +8,7 @@ But even a small incident in the real world of adults is an unpredictable thing 
 
 ### Current Visuals:
 
-![Pre Alpha](Screenshots/pre_alpha_0.3.jpg "Demo room camera set")
-![Pre Alpha](Screenshots/pre_alpha_0.4.jpg "Demo room camera set (corners)")
+![Pre Alpha](Screenshots/pre_alpha_0.5.jpg "DemoRoom - #1 Entry Room")
 
 ### Current States:
 	1. Modeling
